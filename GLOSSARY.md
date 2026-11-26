@@ -14,6 +14,12 @@ _Avoid_: Source, channel, subscription
 A standard.site publication record on the AT Protocol, followed as a **Feed**.
 _Avoid_: Site, blog
 
+### Organisation
+
+**Folder**:
+A named group that a **Feed** belongs to; each **Feed** is in at most one.
+_Avoid_: Category, tag, collection
+
 ### Content
 
 **Article**:
@@ -27,6 +33,16 @@ _Avoid_: Summary, description
 **Extracted Content**:
 The body of an **Article** recovered from its web page, used when **Feed Content** is incomplete.
 _Avoid_: Full text, readability content
+
+### Reading state
+
+**Read**:
+An **Article** the person has consumed, either by opening it in the reader or by marking it. An agent fetching an **Article** never makes it **Read**.
+_Avoid_: Seen, viewed, consumed
+
+**Starred**:
+An **Article** the person has chosen to keep; it is exempt from retention.
+_Avoid_: Saved, favourite, bookmarked
 
 ### Delivery
 

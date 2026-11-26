@@ -1,0 +1,3 @@
+# OPDS uses GET links to mark Articles Read
+
+E-reader OPDS clients (notably CrossPoint on the Xteink X4) can only follow GET links, and an entry is either a download or a navigation link, never both. To mark Articles Read from the device without a trip to the web UI, the OPDS catalog exposes navigation entries whose GET request marks an Article (or a whole Digest) Read and returns the refreshed list. This deliberately breaks "GET is safe" and is confined to authenticated `/opds` paths; the web UI and MCP never change state on GET. KOReader progress sync was considered as an automatic alternative and rejected as too much surface for the benefit.
